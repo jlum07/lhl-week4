@@ -1,3 +1,6 @@
+# PSQL settings hide
+/w4d2/js-psql/settings.json
+
 # Logs
 logs
 *.log
