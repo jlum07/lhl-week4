@@ -1,12 +1,12 @@
-function findByFirstName (db, firstName) {
+function printByFirstName (rows) {
 
-  const query = "SELECT * FROM famous_people WHERE first_name=$1;"
-
-  return db.query(query, [firstName]);
+  let count = 0;
+  for(let row of rows) {
+    console.log(`- ${++count}: ${row.first_name} ${row.last_name}, born '${row.birthdate.toISOString().substring(0,10)}'`);
+  }
 
 }
 
-
 module.exports = {
-  findByFirstName : findByFirstName
+  printByFirstName : printByFirstName
 }
